@@ -11,13 +11,13 @@ content = file.read()  # Read the entire content
 print("Content using read():")
 print(content)
 
-file.seek(0)  # Move the cursor back to the beginning
+file.seek(0)  # Move the cursor back to the beginning, in the lecture we just opened a new file.
 lines = file.readlines()  # Read content as a list of lines
 print("Content using readlines():")
 print(lines)
 file.close()
 
-# 3. write, encoding=utf-8
+# 3. write, and with context encoding=utf-8
 with open("unicode.txt", "w", encoding="utf-8") as f:
     f.write("Hejsan världen!")  # Med utf-8 kan vi använda åäö
 
